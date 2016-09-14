@@ -12,12 +12,12 @@ namespace assignment1
 {
     class WineItemCollection
     {//Used to read,store, and reference a list of wine initially read from a file.
-        //backing fields
+        //backing fields : NONE
 
-        //Constructor
+        //Constructor :NONE
 
-        //Methods
+        //Methods : NONE
 
-        //Properties
+        //Properties :NONE
     }
 }
