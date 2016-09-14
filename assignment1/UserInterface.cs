@@ -13,12 +13,12 @@ namespace assignment1
     class UserInterface
     {//class designed to handle all UI related functions 
 
-        //Backing fields
+        //Backing fields--2: userInput. input.
         private int _userInput;
         string input;
-        //Constructor
+        //Constructor- NONE so far.
 
-        //Methods
+        //Methods--9: 1 public, 8 private.
         public int GetInput()
         {   //Obtains user input.
             this.PrintMenu();
@@ -71,7 +71,7 @@ namespace assignment1
             input = Console.ReadLine();
         }
 
-        //Properties
+        //Properties--1: UserInput
         private int  UserInput
         {
             get { return _userInput; }
