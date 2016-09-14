@@ -81,5 +81,6 @@ Suggestion/Hints:
 
 ## Outside Resources Used
 In-class assignment 1, CIS 207 Notes/Book
+https://msdn.microsoft.com/en-us/library/06tc147t.aspx //Switch Statements
 ## Known Problems, Issues, And/Or Errors in the Program
 None so far.

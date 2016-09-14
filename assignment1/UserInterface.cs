@@ -30,7 +30,9 @@ namespace assignment1
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
             return Int32.Parse(input);
+         
              
+
         }
         private void PrintMenu()
         {   //prints the terminal's options for the user to decide what to do.
@@ -56,7 +58,7 @@ namespace assignment1
         {    //--OPTION 4--Add the WineItem to the WineListArray.
 
         }
-        private void ExitUI()
+        private void ExitUi()
         {    //--OPTION 5--Exit the WineArray program.
             
         }
@@ -70,9 +72,17 @@ namespace assignment1
 
             input = Console.ReadLine();
         }
-
+        private string MenuChoice()
+        {
+            GetInput();
+            
+            switch(input)
+            {
+                case 1:
+            }
+        }
         //Properties--1: UserInput
-        private int  UserInput
+        public int  UserInput
         {
             get { return _userInput; }
             set { _userInput = UserInput; }

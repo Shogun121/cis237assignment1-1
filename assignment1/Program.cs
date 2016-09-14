@@ -14,7 +14,8 @@ namespace assignment1
     {
         static void Main(string[] args)
         {
-            
+            UserInterface uI = new UserInterface();
+            uI.GetInput();
         }
     }
 }
