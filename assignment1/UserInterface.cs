@@ -1,4 +1,8 @@
-﻿using System;
+﻿/**Robert Cooley
+ * CIS 237 Tu, Thu
+ * 9/13/16
+ * */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,8 +41,24 @@ namespace assignment1
             Console.WriteLine("5-Exit UI");
         }
         private void LoadWineList()
-        {   //loads the wine list into an array.
+        {   //--OPTION 1--Load the wine list into an array.
 
+        }
+        private void PrintWineList()
+        {    //--OPTION 2--Print the wine list to the terminal.
+
+        }
+        private void SearchWineItem()
+        {    //--OPTION 3--Search the WineItem Array for an item by index.
+             //Return item if found, if not return an error.
+        }
+        private void AddWineItem()
+        {    //--OPTION 4--Add the WineItem to the WineListArray.
+
+        }
+        private void ExitUI()
+        {    //--OPTION 5--Exit the WineArray program.
+            
         }
         private void PrintError()
         {   //print message for incorrect input
