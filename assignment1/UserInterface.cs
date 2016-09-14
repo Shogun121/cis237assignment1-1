@@ -29,6 +29,7 @@ namespace assignment1
             {
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
+            MenuChoice();
             return Int32.Parse(input);
             
              
@@ -60,7 +61,7 @@ namespace assignment1
         }
         private void ExitUi()
         {    //--OPTION 5--Exit the WineArray program.
-            
+            Console.WriteLine("Goodbye");
         }
         private void PrintError()
         {   //print message for incorrect input
@@ -73,14 +74,27 @@ namespace assignment1
             input = Console.ReadLine();
         }
         private void MenuChoice()
-        {
-            
-            
+        {   //Utilizes a switch statement to determine which menu choice was selected.
             switch(input)
             {
                 case "1":
+                    LoadWineList();
+                    PrintMenu();
+                    break;
+                case "2":
+                    PrintWineList();
+                    PrintMenu();
+                    break;
+                case "3":
+                    SearchWineItem();
+                    PrintMenu();
+                    break;
+                case "4":
+                    AddWineItem();
+                    PrintMenu();
                     break;
                 default:
+                    ExitUi();
                     break;
             }
         }

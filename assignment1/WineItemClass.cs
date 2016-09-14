@@ -34,8 +34,11 @@ namespace assignment1
             this._packInt = PackInt;
         }
 
-        //Methods: NONE
-
+        //Methods--1: ToString Override
+        public override string ToString()
+        {   //prints info related to the wine items
+            return this._idString;
+        }
         //Properties--3: ID, Description, and Pack
         public string ID
         {
