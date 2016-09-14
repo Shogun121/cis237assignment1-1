@@ -80,6 +80,6 @@ Suggestion/Hints:
 | **Total**           | **100**|
 
 ## Outside Resources Used
-In-class assignment 1.
+In-class assignment 1, CIS 207 Notes/Book
 ## Known Problems, Issues, And/Or Errors in the Program
 None so far.
