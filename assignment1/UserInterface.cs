@@ -30,7 +30,7 @@ namespace assignment1
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
             return Int32.Parse(input);
-         
+            
              
 
         }
@@ -72,13 +72,16 @@ namespace assignment1
 
             input = Console.ReadLine();
         }
-        private string MenuChoice()
+        private void MenuChoice()
         {
-            GetInput();
+            
             
             switch(input)
             {
-                case 1:
+                case "1":
+                    break;
+                default:
+                    break;
             }
         }
         //Properties--1: UserInput
