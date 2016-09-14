@@ -26,10 +26,12 @@ namespace assignment1
         }
 
         //2nd Constructor(3 Parameter)
-            //Takes three parameters......-FINISH-
-        public WineItemClass(string idString,string descString, int packInt)
+            //Accepts three arguments and assigns backing fields to them if used.
+        public WineItemClass(string IdString,string DescString, int PackInt)
         {
-
+            this._idString = IdString;
+            this._descString = DescString;
+            this._packInt = PackInt;
         }
 
         //Methods: NONE
