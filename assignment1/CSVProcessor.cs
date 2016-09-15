@@ -9,31 +9,31 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;                            //required to use StreamReader.
 
-//namespace assignment1
-//{
-    
-//    class CSVProcessor
-//    { //Handles the processing of the file.
-//       StreamReader inputFile;
+namespace assignment1
+{
 
-//        //Backing Field--2: processedBool, wineItemString
-//        private bool processedBool = false;
-//        private string wineItemString="";
+    class CSVProcessor
+    { //Handles the processing of the file.
+        StreamReader inputFile;
 
-//        //Constructor : NONE
+        //Backing Field--2: processedBool, wineItemString
+        private bool processedBool = false;
+        private string wineItemString = "";
 
-//        //Methods--1: ReadCsvFile
-//        public void ReadCsvFile
-//        {   //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
+        //Constructor : NONE
 
-                         
-//            inputFile=File.OpenText("WineList.txt");
-//            while(!inputFile.EndOfStream)
-//            {
+        //Methods--1: ReadCsvFile
+        public void ReadCsvFile()
+        {   //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
 
-//            }
 
-//        }
-//        //Properties : NONE
-//    }
-//}
+            inputFile=File.OpenText("WineList.txt");
+            while(!inputFile.EndOfStream)
+            {
+
+            }
+
+        }
+        //Properties : NONE
+    }
+}
