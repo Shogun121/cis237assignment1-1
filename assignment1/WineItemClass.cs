@@ -12,6 +12,8 @@ namespace assignment1
 {
     class WineItemClass
     {//class used to describe individual item in the WineItemList.
+
+        
         //Backing Fields--3: ID, Desc, Pack
         private string _idString;
         private string _descString;

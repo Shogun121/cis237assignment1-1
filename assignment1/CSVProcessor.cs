@@ -16,6 +16,9 @@ namespace assignment1
     { //Handles the processing of the file.
         StreamReader inputFile;
 
+        //Array for wine items
+        Array WineArray = new Array[5000];
+
         //Backing Field--2: processedBool, wineItemString
         private bool processedBool = false;
         private string wineItemString = "";
@@ -30,8 +33,11 @@ namespace assignment1
             inputFile=File.OpenText("WineList.txt");
             while(!inputFile.EndOfStream)
             {
+                wineItemString = inputFile.ReadLine();
 
+                
             }
+            processedBool = true;           //change bool value to prevent the program from reading the list a second time.
 
         }
         //Properties : NONE
