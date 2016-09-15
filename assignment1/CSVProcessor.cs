@@ -34,8 +34,11 @@ namespace assignment1
             while(!inputFile.EndOfStream)
             {
                 wineItemString = inputFile.ReadLine();
-
-                
+                foreach (Array index in WineArray[])
+                {
+                    
+                    
+                }                          
             }
             processedBool = true;           //change bool value to prevent the program from reading the list a second time.
 
