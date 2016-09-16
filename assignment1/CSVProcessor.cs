@@ -23,26 +23,33 @@ namespace assignment1
         private bool processedBool = false;
         private string wineItemString = "";
 
-        //Constructor : NONE
-
-        //Methods--1: ReadCsvFile
-        public void ReadCsvFile()
-        {   //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
-
-
-            inputFile=File.OpenText("WineList.txt");
-            while(!inputFile.EndOfStream)
-            {
-                wineItemString = inputFile.ReadLine();
-                foreach (Array index in WineArray[])
+            public void ReadCsvFile()
+            {   //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
+                try
                 {
-                    
-                    
-                }                          
-            }
-            processedBool = true;           //change bool value to prevent the program from reading the list a second time.
+                    inputFile = File.OpenText("WineList.txt");
+                    while (!inputFile.EndOfStream)
+                    {
+                        wineItemString = inputFile.ReadLine();
+                        foreach (Array index in WineArray[0])
+                        {
 
-        }
-        //Properties : NONE
+                        }
+                    }
+                    //change bool value to prevent the program from reading the list a second time.         
+                    
+                }
+                catch(Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    Console.WriteLine();
+                    Console.WriteLine(ex.StackTrace);
+                }
+                finally
+                {
+                    processedBool = true;
+                    inputFile.Close();
+                }
+            }
     }
 }
