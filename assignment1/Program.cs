@@ -16,9 +16,15 @@ namespace assignment1
         {
             UserInterface uI = new UserInterface();
             uI.GetInput();
+            uI.MenuChoice();
+            //if(uI.UserInput!="5")
+            //{
+            //    uI.MenuChoice();
+            //}
 
-            WineItemClass wiC = new WineItemClass();
-            Console.WriteLine(wiC.ToString());
+            //WineItemClass wiC = new WineItemClass();
+            //Console.WriteLine(wiC.ToString());
+
         }
     }
 }

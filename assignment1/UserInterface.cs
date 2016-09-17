@@ -14,7 +14,7 @@ namespace assignment1
     {//class designed to handle all UI related functions 
 
         //Backing fields--2: userInput. input.
-        private int _userInput;
+        private string _userInput;
         string input;
         //Constructor- NONE so far.
 
@@ -29,7 +29,7 @@ namespace assignment1
             {
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
-            MenuChoice();
+            
             return Int32.Parse(input);
         }
         private void PrintMenu()
@@ -70,33 +70,38 @@ namespace assignment1
 
             input = Console.ReadLine();
         }
-        private void MenuChoice()
+        public string MenuChoice()
         {   //Utilizes a switch statement to determine which menu choice was selected.
             switch(input)
             {
                 case "1":
                     LoadWineList();
                     PrintMenu();
+                    MenuChoice();
                     break;
                 case "2":
                     PrintWineList();
                     PrintMenu();
+                    MenuChoice();
                     break;
                 case "3":
                     SearchWineItem();
                     PrintMenu();
+                    MenuChoice();
                     break;
                 case "4":
                     AddWineItem();
                     PrintMenu();
+                    MenuChoice();
                     break;
                 default:
                     ExitUi();
                     break;
             }
+            return input;
         }
         //Properties--1: UserInput
-        public int  UserInput
+        public string  UserInput
         {
             get { return _userInput; }
             set { _userInput = UserInput; }
