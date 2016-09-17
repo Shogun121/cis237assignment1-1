@@ -16,7 +16,14 @@ namespace assignment1
         {
             UserInterface uI = new UserInterface();
             uI.GetInput();
-            uI.MenuChoice();
+
+            while(uI.UserInput!="5")
+            {
+                uI.GetInput();
+                uI.MenuChoice();
+
+            }
+            
             //if(uI.UserInput!="5")
             //{
             //    uI.MenuChoice();

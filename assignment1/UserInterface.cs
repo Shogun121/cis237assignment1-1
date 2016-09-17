@@ -77,22 +77,22 @@ namespace assignment1
                 case "1":
                     LoadWineList();
                     PrintMenu();
-                    MenuChoice();
+                    //MenuChoice();
                     break;
                 case "2":
                     PrintWineList();
                     PrintMenu();
-                    MenuChoice();
+                    //MenuChoice(); 
                     break;
                 case "3":
                     SearchWineItem();
                     PrintMenu();
-                    MenuChoice();
+                    //MenuChoice();
                     break;
                 case "4":
                     AddWineItem();
                     PrintMenu();
-                    MenuChoice();
+                    //MenuChoice();
                     break;
                 default:
                     ExitUi();
