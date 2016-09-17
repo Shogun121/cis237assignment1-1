@@ -31,9 +31,6 @@ namespace assignment1
             }
             MenuChoice();
             return Int32.Parse(input);
-            
-             
-
         }
         private void PrintMenu()
         {   //prints the terminal's options for the user to decide what to do.
