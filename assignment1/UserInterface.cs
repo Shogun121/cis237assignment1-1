@@ -25,7 +25,7 @@ namespace assignment1
 
             input = Console.ReadLine();
 
-            while (input != "1" & input != "2" && input != "3" && input != "4" && input != "5")
+            while (input != "1" && input != "2" && input != "3" && input != "4" && input != "5")
             {
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
@@ -39,6 +39,7 @@ namespace assignment1
             Console.WriteLine("3-Search list by Index");
             Console.WriteLine("4-Add Wine Items");
             Console.WriteLine("5-Exit UI");
+            Console.WriteLine();
         }
         private void LoadWineList()
         {   //--OPTION 1--Load the wine list into an array.
@@ -76,23 +77,19 @@ namespace assignment1
             {
                 case "1":
                     LoadWineList();
-                    PrintMenu();
-                    //MenuChoice();
+                    Console.WriteLine();
                     break;
                 case "2":
                     PrintWineList();
-                    PrintMenu();
-                    //MenuChoice(); 
+                    Console.WriteLine();
                     break;
                 case "3":
                     SearchWineItem();
-                    PrintMenu();
-                    //MenuChoice();
+                    Console.WriteLine();
                     break;
                 case "4":
                     AddWineItem();
-                    PrintMenu();
-                    //MenuChoice();
+                    Console.WriteLine();
                     break;
                 default:
                     ExitUi();
