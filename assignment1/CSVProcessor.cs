@@ -16,8 +16,7 @@
 //    { //Handles the processing of the file.
 //        StreamReader inputFile;
 
-//        //Array for wine items
-//        Array WineArray = new Array[5000];
+
 
 //        //Backing Field--2: processedBool, wineItemString
 //        private bool processedBool = false;
