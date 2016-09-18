@@ -13,7 +13,8 @@ namespace assignment1
     class WineItemClass
     {//class used to describe individual item in the WineItemList.
         //Array for wine items
-        Array WineArray = new Array[5000];
+        string[] WineArray= new string[5000];
+
         
         //Backing Fields--3: ID, Desc, Pack
         private string _idString;
@@ -37,16 +38,27 @@ namespace assignment1
             this._packInt = PackInt;
         }
 
-        //Methods--1: ToString Override
+        //Methods--2: ToString Override, SearchWineCollection
         public string SearchWineCollection()
         {   //method used to search through the WineArray for a match to the search query.
 
             //variable declared to hold the the index place through the loop.
             int i = 0;
+
+            //loop searching WineArray by index for id.
             while(WineArray[i]!=_idString)
             {
+                //increments index to search the next item in the array.
+                i += 1;
 
+                //loop to determine if the whole array has been searched
+                if(WineArray[i]==WineArray[5000])
+                {
+                    //return null to notify program that the wine item was not found.
+                    return null;
+                }
             }
+            return WineArray[i];
         }
         public override string ToString()
         {   //prints info related to the wine items
