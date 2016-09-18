@@ -36,6 +36,7 @@ namespace assignment1
             this._idString = IdString;
             this._descString = DescString;
             this._packInt = PackInt;
+            AddWineItem(_idString,_descString,_packInt);
         }
 
         //Methods--2: ToString Override, SearchWineCollection
@@ -59,6 +60,27 @@ namespace assignment1
                 }
             }
             return WineArray[i];
+        }
+        public void PrintWineList()
+        {
+            //Prints wine items until the index(starting from 0) reaches the end of the array.
+            int index=0;
+            while(WineArray[index]!=WineArray[5000])
+            {
+                Console.WriteLine();
+            }
+        }
+        public string AddWineItem(string WineID, string WineDes, int WinePack)
+        {
+            try
+            {
+                
+            }
+            catch
+            {
+
+            }
+            return null;
         }
         public override string ToString()
         {   //prints info related to the wine items
