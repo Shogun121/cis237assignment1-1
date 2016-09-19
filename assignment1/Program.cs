@@ -22,9 +22,6 @@ namespace assignment1
                 uI.GetInput();
                 uI.MenuChoice();
             }      
-            //WineItemClass wiC = new WineItemClass();
-            //Console.WriteLine(wiC.ToString());
-
         }
     }
 }

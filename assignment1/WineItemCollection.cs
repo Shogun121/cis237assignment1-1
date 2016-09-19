@@ -15,13 +15,12 @@ namespace assignment1
 
         CSVProcessor csvprocessor = new CSVProcessor();
 
-
         //backing field
         bool inputBool=false;   //bool preventing the user from inputing file more than once.
 
         public bool LoadWineList()
         {
-            csvprocessor.ReadCsvFile("../../../datafiles", wineItemArray[5000]);
+            csvprocessor.ReadCsvFile("../../../datafiles",wineItemArray[5000]);
             inputBool=true;
         }
 
