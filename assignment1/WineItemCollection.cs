@@ -21,7 +21,7 @@ namespace assignment1
 
         public bool LoadWineList()
         {
-            csvprocessor.ReadCsvFile("../../../datafiles", csvprocessor[] WineItemArray);
+            csvprocessor.ReadCsvFile("../../../datafiles", wineItemArray[5000]);
             inputBool=true;
         }
 
@@ -29,7 +29,7 @@ namespace assignment1
         {
             //Prints wine items until the index(starting from 0) reaches the end of the array.
             int index = 0;
-            while (WineItemArray[index] != CSVProcessor.WineItemArray[5000])
+            while (csvprocessor.wineItemArray[index] != csvprocessor.wineItemArray[5000])
             {
                 Console.WriteLine();
                 index++;
