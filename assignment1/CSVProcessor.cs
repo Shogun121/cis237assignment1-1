@@ -13,45 +13,67 @@ namespace assignment1
 {
 
     class CSVProcessor
-    { //Handles the processing of the file.
-        StreamReader inputFile;
-
+    { 
         //Instantiate a version of WineItemClass. 
         WineItemClass WineItem = new WineItemClass();
 
         WineItemClass[] wineItemArray = new WineItemClass[5000]; 
 
-
-
         //Backing Field--2: processedBool, wineItemString
         private bool processedBool = false;
         private string wineItemString = "";
 
-        public void ReadCsvFile()
-        {   //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
+        static bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
+        {   //reads the csv file
+            
+            //Handles the processing of the file.
+            StreamReader inputFile=null;
+            
+            //Reads through the CSV file and switches a bool variable, to prevent a 2nd read.
             try
             {
-                inputFile = File.OpenText("WineList.txt");
-                while (!inputFile.EndOfStream)
-                {
-                    wineItemString = inputFile.ReadLine();
-                }
-                //change bool value to prevent the program from reading the list a second time.         
+                //declare a variable to hold each read line
+                string inputString;
 
+                //Instantiate Stream reader, if path is incorrect an exception will be thrown.
+                inputFile = new StreamReader(pathToCsvFile);
+
+                //Setup a counter we aren't using yet.
+                int counter = 0;
+
+                //while a line can be read, put it in the string var.
+                while((inputString=inputFile.ReadLine())!=null)
+                {
+                    /*Call the inputLine method and pass in the WineItem Array(passed by ref auto)
+                     * and the counter, that wil be used as index. Increment with ++
+                     */
+                    InputLine(inputString, WineItemArray,counter++);
+                }
+                //All the reads performed worked and return true.
+                return true;
             }
             catch (Exception ex)
             {
+                //Output exception string and the stack trace to aid in debugging.
                 Console.WriteLine(ex.ToString());
                 Console.WriteLine();
                 Console.WriteLine(ex.StackTrace);
+
+                //return false because the readings failed.
+                return false;
             }
+            //Used to ensure specific code is run regardless of try-catch execution.
             finally
             {
-                processedBool = true;
-                inputFile.Close();
+              //Check to see if the streamReader object is actually open before bothering.
+                if(inputFile!=null)
+                {
+                    //Close the file to ensure data is secure, and to free memory.
+                    inputFile.Close();
+                }
             }
         }
-        public void InputLine(string line,WineItemClass[] wineItemArray, int index)
+        static void InputLine(string line,WineItemClass[] wineItemArray, int index)
         {   //Method to split the readline into segments.
 
             //declare a string array.
