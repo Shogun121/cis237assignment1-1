@@ -83,5 +83,6 @@ Suggestion/Hints:
 In-class assignment 1, CIS 207 Notes/Book
 https://msdn.microsoft.com/en-us/library/06tc147t.aspx //Switch Statements
 https://msdn.microsoft.com/en-us/library/aa288453(v=vs.71).aspx	//Array Declaration
+http://stackoverflow.com/questions/1046740/how-can-i-validate-a-string-to-only-allow-alphanumeric-characters-in-it  //possible data validation
 ## Known Problems, Issues, And/Or Errors in the Program
 None so far.

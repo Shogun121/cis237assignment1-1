@@ -76,7 +76,10 @@ namespace assignment1
             {
                 if(WineID.All(char.IsLetter))
                 {
-
+                    if (WineDes.All(char.IsLetter))
+                    {
+                        
+                    }
                 }
             }
             catch
