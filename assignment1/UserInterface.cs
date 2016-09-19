@@ -13,6 +13,8 @@ namespace assignment1
     class UserInterface
     {//class designed to handle all UI related functions 
 
+        
+
         //Backing fields--2: userInput. input.
         private string _userInput;
         string input;
@@ -41,9 +43,9 @@ namespace assignment1
             Console.WriteLine("5-Exit UI");
             Console.WriteLine();
         }
-        private void LoadWineList()
+        private void Load()
         {   //--OPTION 1--Load the wine list into an array.
-
+            
         }
         private void PrintWineList()
         {    //--OPTION 2--Print the wine list to the terminal.
@@ -76,7 +78,7 @@ namespace assignment1
             switch(input)
             {
                 case "1":
-                    LoadWineList();
+                    Load();
                     Console.WriteLine();
                     break;
                 case "2":

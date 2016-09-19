@@ -11,23 +11,50 @@ using System.Threading.Tasks;
 namespace assignment1
 {
     class WineItemCollection
-    {//Used to read,store, and reference a list of wine initially read from a file.
+    {   //Used to read,store, and reference a list of wine initially read from a file.
 
-        //backing fields : NONE
+        CSVProcessor csvprocessor = new CSVProcessor();
 
-        //Constructor :NONE
 
-        //Methods : NONE
-        //public void PrintWineList()
-        //{
-        //    //Prints wine items until the index(starting from 0) reaches the end of the array.
-        //    int index = 0;
-        //    while (WineArray[index] != WineArray[5000])
+        //backing field
+        bool inputBool=false;   //bool preventing the user from inputing file more than once.
+
+        public bool LoadWineList()
+        {
+            csvprocessor.ReadCsvFile("../../../datafiles", csvprocessor[] WineItemArray);
+            inputBool=true;
+        }
+
+        public void PrintWineList()
+        {
+            //Prints wine items until the index(starting from 0) reaches the end of the array.
+            int index = 0;
+            while (WineItemArray[index] != CSVProcessor.WineItemArray[5000])
+            {
+                Console.WriteLine();
+                index++;
+            }
+        }
+        //public string SearchWineCollection()
+        //{   //method used to search through the WineArray for a match to the search query.
+
+        //    //variable declared to hold the the index place through the loop.
+        //    int i = 0;
+
+        //    //loop searching WineArray by index for id.
+        //    while (WineArray[i] != _idString)
         //    {
-        //        Console.WriteLine();
-        //    }
-        //}
+        //        //increments index to search the next item in the array.
+        //        i += 1;
 
-        //Properties :NONE
+        //        //loop to determine if the whole array has been searched
+        //        if (WineArray[i] == WineArray[5000])
+        //        {
+        //            //return null to notify program that the wine item was not found.
+        //            return null;
+        //        }
+        //    }
+        //    return WineArray[i];
+        //}
     }
 }

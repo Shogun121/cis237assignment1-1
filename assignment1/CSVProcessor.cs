@@ -17,13 +17,9 @@ namespace assignment1
         //Instantiate a version of WineItemClass. 
         WineItemClass WineItem = new WineItemClass();
 
-        WineItemClass[] wineItemArray = new WineItemClass[5000]; 
+        public WineItemClass[] wineItemArray = new WineItemClass[5000]; 
 
-        //Backing Field--2: processedBool, wineItemString
-        private bool processedBool = false;
-        private string wineItemString = "";
-
-        static bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
+        public static bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
         {   //reads the csv file
             
             //Handles the processing of the file.
@@ -88,27 +84,7 @@ namespace assignment1
             wineItemArray[index] = new WineItemClass(iD, description, pack);
 
         }
-        //public string SearchWineCollection()
-        //{   //method used to search through the WineArray for a match to the search query.
-
-        //    //variable declared to hold the the index place through the loop.
-        //    int i = 0;
-
-        //    //loop searching WineArray by index for id.
-        //    while (WineArray[i] != _idString)
-        //    {
-        //        //increments index to search the next item in the array.
-        //        i += 1;
-
-        //        //loop to determine if the whole array has been searched
-        //        if (WineArray[i] == WineArray[5000])
-        //        {
-        //            //return null to notify program that the wine item was not found.
-        //            return null;
-        //        }
-        //    }
-        //    return WineArray[i];
-        //}
+        
         
     }
 }
