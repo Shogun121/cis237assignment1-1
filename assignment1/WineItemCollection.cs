@@ -18,6 +18,15 @@ namespace assignment1
         //Constructor :NONE
 
         //Methods : NONE
+        //public void PrintWineList()
+        //{
+        //    //Prints wine items until the index(starting from 0) reaches the end of the array.
+        //    int index = 0;
+        //    while (WineArray[index] != WineArray[5000])
+        //    {
+        //        Console.WriteLine();
+        //    }
+        //}
 
         //Properties :NONE
     }
