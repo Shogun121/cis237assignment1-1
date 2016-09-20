@@ -17,9 +17,9 @@ namespace assignment1
         //Instantiate a version of WineItemClass. 
         WineItemClass WineItem = new WineItemClass();
 
-        public WineItemClass[] wineItemArray = new WineItemClass[5000]; 
+        
 
-        public static bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
+        public bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
         {   //reads the csv file
             
             //Handles the processing of the file.

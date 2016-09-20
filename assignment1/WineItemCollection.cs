@@ -14,13 +14,14 @@ namespace assignment1
     {   //Used to read,store, and reference a list of wine initially read from a file.
 
         CSVProcessor csvprocessor = new CSVProcessor();
+        public WineItemClass[] wineItemArray = new WineItemClass[5000];
 
         //backing field
         bool inputBool=false;   //bool preventing the user from inputing file more than once.
 
-        public bool LoadWineList()
+        public void LoadWineList()
         {
-            csvprocessor.ReadCsvFile("../../../datafiles",wineItemArray[5000]);
+            csvprocessor.ReadCsvFile("../../../datafiles",wineItemArray);
             inputBool=true;
         }
 
@@ -28,7 +29,7 @@ namespace assignment1
         {
             //Prints wine items until the index(starting from 0) reaches the end of the array.
             int index = 0;
-            while (csvprocessor.wineItemArray[index] != csvprocessor.wineItemArray[5000])
+            while (wineItemArray[index] !=wineItemArray[5000])
             {
                 Console.WriteLine();
                 index++;
