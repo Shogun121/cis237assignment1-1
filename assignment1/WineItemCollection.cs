@@ -61,12 +61,12 @@ namespace assignment1
             }
             Console.WriteLine(wineItemArray[i].ToString());
         }
-        public void AddItem()
-        {   //method used to add an item to the wine item array.
+        //public void AddItem()
+        //{   //method used to add an item to the wine item array.
 
-            //call method to get user input for addition to array;
-            myUi.GetInputNoMenu();
+        //    //call method to get user input for addition to array;
+            
 
-        }
+        //}
     }
 }

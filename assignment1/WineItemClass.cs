@@ -12,8 +12,7 @@ namespace assignment1
 {
     class WineItemClass
     {//class used to describe individual item in the WineItemList.
-        //Array for wine items
-        //string[] WineArray= new string[5000];
+        UserInterface myUi = new UserInterface();
 
         
         //Backing Fields--3: ID, Desc, Pack
@@ -39,17 +38,26 @@ namespace assignment1
             AddWineItem(_idString,_descString,_packDec);
         }
 
-        //Methods--2: ToString Override, SearchWineCollection
+        //Methods--2: ToString Override, AddWineItem
         
         public string AddWineItem(string WineID, string WineDes, decimal WinePack)
-        {
+        {   //Method used to validate input to pass through the array to see if the item already exists
+            //if it does, the user will be informed, if not the item will be added, and the user will
+            //be informed.
+            myUi.GetInputNoMenu();
             try
             {
                 if(WineID.All(char.IsLetter))
                 {
+                    _idString = WineID.ToLower();
+                    
                     if (WineDes.All(char.IsLetter))
                     {
-                        
+                        _descString = WineDes.ToLower();
+                        if( _packDec= decimal.Parse(WinePack))
+                        {
+
+                        }
                     }
                 }
             }

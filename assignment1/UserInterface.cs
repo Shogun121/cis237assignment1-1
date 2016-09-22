@@ -19,7 +19,7 @@ namespace assignment1
         private string _userInput;
         string input;
 
-        //Methods--10: 2 public, 8 private.
+        //Methods--11: 3 public, 8 private.
         public int GetInput()
         {   //Obtains user input.
             this.PrintMenu();
@@ -34,6 +34,10 @@ namespace assignment1
             UserInput = input;
             return Int32.Parse(input);
         }
+        public void GetAddItemInput()
+        {
+
+        }
         public void GetInputNoMenu()
         {   //Obtains user input.
             input = Console.ReadLine();
@@ -42,6 +46,7 @@ namespace assignment1
             {
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
+            UserInput = input;
         }
         private void PrintMenu()
         {   //prints the terminal's options for the user to decide what to do.
