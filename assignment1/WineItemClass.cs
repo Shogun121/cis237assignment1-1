@@ -47,16 +47,22 @@ namespace assignment1
             myUi.GetInputNoMenu();
             try
             {
+                myUi.GetAddItemID();
+
                 if(WineID.All(char.IsLetter))
-                {
+                { 
                     _idString = WineID.ToLower();
-                    
+                    myUi.GetAddItemDesc();
+
                     if (WineDes.All(char.IsLetter))
                     {
                         _descString = WineDes.ToLower();
-                        if( _packDec= decimal.Parse(WinePack))
-                        {
+                        myUi.GetAddItemPack();
 
+                        //BROKEN, supposed to validate numerical data
+                        if(WinePack)
+                        {
+                            _packDec = WinePack;
                         }
                     }
                 }
