@@ -11,13 +11,10 @@ using System.IO;                            //required to use StreamReader.
 
 namespace assignment1
 {
-
     class CSVProcessor
     { 
         //Instantiate a version of WineItemClass. 
         WineItemClass WineItem = new WineItemClass();
-
-        
 
         public bool ReadCsvFile(string pathToCsvFile,WineItemClass[] WineItemArray)
         {   //reads the csv file
@@ -82,9 +79,6 @@ namespace assignment1
 
             //use local variables to create an instance of the wine array to hold the incoming records.
             wineItemArray[index] = new WineItemClass(iD, description, pack);
-
-        }
-        
-        
+        }      
     }
 }

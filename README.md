@@ -86,4 +86,4 @@ https://msdn.microsoft.com/en-us/library/aa288453(v=vs.71).aspx	//Array Declarat
 http://stackoverflow.com/questions/6128282/acessing-an-original-array-from-another-class-c-sharp //Array calling
 http://stackoverflow.com/questions/1046740/how-can-i-validate-a-string-to-only-allow-alphanumeric-characters-in-it  //possible data validation
 ## Known Problems, Issues, And/Or Errors in the Program
-None so far.
+Doesn't compile because of issues in search method.

@@ -12,15 +12,14 @@ namespace assignment1
 {
     class UserInterface
     {//class designed to handle all UI related functions 
-
+        WineItemCollection myCollection=new WineItemCollection();
         
 
         //Backing fields--2: userInput. input.
         private string _userInput;
         string input;
-        //Constructor- NONE so far.
 
-        //Methods--9: 1 public, 8 private.
+        //Methods--10: 2 public, 8 private.
         public int GetInput()
         {   //Obtains user input.
             this.PrintMenu();
@@ -31,8 +30,18 @@ namespace assignment1
             {
                 PrintError();                   //Prints error message, prints menu, and reads input.
             }
-            
+
+            UserInput = input;
             return Int32.Parse(input);
+        }
+        public void GetInputNoMenu()
+        {   //Obtains user input.
+            input = Console.ReadLine();
+
+            while (input != "1" && input != "2" && input != "3" && input != "4" && input != "5")
+            {
+                PrintError();                   //Prints error message, prints menu, and reads input.
+            }
         }
         private void PrintMenu()
         {   //prints the terminal's options for the user to decide what to do.
@@ -45,15 +54,16 @@ namespace assignment1
         }
         private void Load()
         {   //--OPTION 1--Load the wine list into an array.
-            
+            myCollection.LoadWineList();
         }
         private void PrintWineList()
         {    //--OPTION 2--Print the wine list to the terminal.
-
+            myCollection.PrintWineList();
         }
         private void SearchWineItem()
         {    //--OPTION 3--Search the WineItem Array for an item by index.
              //Return item if found, if not return an error.
+            myCollection.SearchWineCollection();
         }
         private void AddWineItem()
         {    //--OPTION 4--Add the WineItem to the WineListArray.

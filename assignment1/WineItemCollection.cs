@@ -15,6 +15,8 @@ namespace assignment1
 
         CSVProcessor csvprocessor = new CSVProcessor();
         public WineItemClass[] wineItemArray = new WineItemClass[5000];
+        WineItemClass myItemClass = new WineItemClass();
+        UserInterface myUi = new UserInterface();
 
         //backing field
         bool inputBool=false;   //bool preventing the user from inputing file more than once.
@@ -35,26 +37,36 @@ namespace assignment1
                 index++;
             }
         }
-        //public string SearchWineCollection()
-        //{   //method used to search through the WineArray for a match to the search query.
+        public void SearchWineCollection()
+        {   //method used to search through the WineArray for a match to the search query.
 
-        //    //variable declared to hold the the index place through the loop.
-        //    int i = 0;
 
-        //    //loop searching WineArray by index for id.
-        //    while (WineArray[i] != _idString)
-        //    {
-        //        //increments index to search the next item in the array.
-        //        i += 1;
+            //call method in UI to acquire search parameters
+            myUi.GetInputNoMenu();
+            //variable declared to hold the the index place through the loop.
+            int i = 0;
 
-        //        //loop to determine if the whole array has been searched
-        //        if (WineArray[i] == WineArray[5000])
-        //        {
-        //            //return null to notify program that the wine item was not found.
-        //            return null;
-        //        }
-        //    }
-        //    return WineArray[i];
-        //}
+            //loop searching WineArray by index for id.
+            while (wineItemArray[i] != myUi.UserInput)
+            {
+                //increments index to search the next item in the array.
+                i += 1;
+
+                //loop to determine if the whole array has been searched
+                if (wineItemArray[i] == wineItemArray[5000])
+                {
+                    //Notify program that the wine item was not found.
+                    Console.WriteLine("Item not found");
+                }
+            }
+            Console.WriteLine(wineItemArray[i].ToString());
+        }
+        public void AddItem()
+        {   //method used to add an item to the wine item array.
+
+            //call method to get user input for addition to array;
+            myUi.GetInputNoMenu();
+
+        }
     }
 }
